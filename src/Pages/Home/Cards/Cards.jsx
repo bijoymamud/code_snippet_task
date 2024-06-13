@@ -1,17 +1,27 @@
+import useProducts from "../../../Hooks/useProducts";
+import SingleCard from "./SingleCard";
 
 
 const Cards = () => {
-  return (
-    <div>
-      <h2 className='text-7xl font-extrabold'>All cards will show here</h2>
-      <button className="btn">Button</button>
-      <button className="btn btn-neutral">Neutral</button>
-      <button className="btn btn-primary">Primary</button>
-      <button className="btn btn-secondary">Secondary</button>
-      <button className="btn btn-accent">Accent</button>
-      <button className="btn btn-ghost">Ghost</button>
-      <button className="btn btn-link">Link</button>
+  const [items, loading] = useProducts()
+  if (loading) {
+    return <div>
+      <span className="loading loading-bars loading-lg"></span>
     </div>
+  }
+  return (
+    <section className="py-32">
+      <div>
+        <h2 className="text-3xl font-bold">Total List of Items : {items.length}</h2>
+        
+      </div>
+
+      <div className="grid grid-cols-3 gap-8 py-32">
+        {
+          items.map((item) => <SingleCard key={item.id} item={item}></SingleCard>)
+        }
+      </div>
+    </section>
   );
 };
 
