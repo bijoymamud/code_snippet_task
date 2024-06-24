@@ -17,7 +17,7 @@
         "customer_name": "Jane Smith",
         "cod": 200.00,
         "deduct": 15.00,
-        "status": "In Transit",
+        "status": "Cancelled",
         "track_parcel": "TRK123456790",
         "details": "Order is on the way."
     },
@@ -50,7 +50,7 @@
         "customer_name": "Charlie Davis",
         "cod": 350.00,
         "deduct": 30.00,
-        "status": "Returned",
+        "status": "Delivered",
         "track_parcel": "TRK123456793",
         "details": "Order was returned to the seller."
     },
@@ -72,7 +72,7 @@
         "customer_name": "Ethan Foster",
         "cod": 450.00,
         "deduct": 40.00,
-        "status": "In Transit",
+        "status": "Pending",
         "track_parcel": "TRK123456795",
         "details": "Order is en route to the destination."
     },
@@ -105,7 +105,7 @@
         "customer_name": "Hannah Ingram",
         "cod": 600.00,
         "deduct": 55.00,
-        "status": "Returned",
+        "status": "Cancelled",
         "track_parcel": "TRK123456798",
         "details": "Order was returned due to wrong item shipped."
     }
