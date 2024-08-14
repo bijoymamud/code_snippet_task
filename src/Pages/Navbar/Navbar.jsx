@@ -1,5 +1,4 @@
-import { FaSearch, FaSearchPlus } from "react-icons/fa";
-import { FaSearchengin } from "react-icons/fa6";
+import {FaSearchPlus } from "react-icons/fa";
 
 const Navbar = () => {
 
