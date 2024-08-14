@@ -1,11 +1,12 @@
-import Navbar from "../../Navbar/Navbar";
+import Snippats from "../Snippats/Snippats";
+
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
       
-
+      
+        <Snippats/>
 
     </div>
   );

@@ -4,7 +4,7 @@ const Navbar = () => {
 
 
   return (
-    <section className="bg-gray-100 min-h-screen p-5">
+    <section className="">
       
       {/* navbar section start */}
       <div className="bg-white flex items-center justify-between p-3 rounded-md" >
@@ -49,7 +49,7 @@ const Navbar = () => {
 
 
       {/* tabs section start */}
-      <div className="flex items-center justify-between p-2 rounded-md mt-5 bg-white" >
+      <div className="flex items-center justify-between p-2 rounded-md my-5 bg-white" >
 
             <div className="">
                   <div role="tablist" className="tabs ">
