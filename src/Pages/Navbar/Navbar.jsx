@@ -1,4 +1,10 @@
 import {FaSearchPlus } from "react-icons/fa";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode, Pagination } from 'swiper/modules';
+// import required modules
+import 'swiper/css';
+import 'swiper/css/free-mode';
 
 const Navbar = () => {
 
@@ -49,22 +55,42 @@ const Navbar = () => {
 
 
       {/* tabs section start */}
-      <div className="flex items-center justify-between p-2 rounded-md my-5 bg-white" >
+        <div className="flex items-center justify-between gap-10 p-2 rounded-md my-5 bg-white" >
 
-            <div className="">
-                  <div role="tablist" className="tabs ">
-                      <a role="tab" className="tab bg-violet-500 rounded-md text-white">All</a>
-                      <a role="tab" className="tab tab-active text-gray-500">Filter Functions Exercises </a>
-                      <a role="tab" className="tab text-gray-500">API Methods</a>
-                      <a role="tab" className="tab text-gray-500">JavaScript Functions</a>
-                      <a role="tab" className="tab text-gray-500">React Functions</a>
-                      <a role="tab" className="tab text-gray-500">Reduce Functions</a>
+            <div className=" ">
+                  <h1 className="btn btn-sm bg-purple-500 hover:bg-purple-800 text-white  rounded-md">All</h1>
+              </div>
+
+                <div className="w-10/12 cursor-pointer">
+                      <Swiper
+                              slidesPerView={6}
+                              spaceBetween={10}
+                              freeMode={true}
+                              pagination={{
+                                clickable: true,
+                              }}
+                              modules={[FreeMode, Pagination]}
+                              className="mySwiper r"
+                            >
+                              <SwiperSlide className="">Java Exercise</SwiperSlide>
+                              <SwiperSlide>React Exercise</SwiperSlide>
+                              <SwiperSlide>C++ Exercise</SwiperSlide>
+                              <SwiperSlide>JS Exercise</SwiperSlide>
+                              <SwiperSlide>Python Exercise</SwiperSlide>
+                              <SwiperSlide>Redux Exercise</SwiperSlide>
+                              <SwiperSlide>NextJs Exercise</SwiperSlide>
+                              <SwiperSlide>Angular Exercise</SwiperSlide>
+                              <SwiperSlide>Rubi Exercise</SwiperSlide>
+                              <SwiperSlide>Java Exercise</SwiperSlide>
+                              
+                            </Swiper>
                 </div>
-            </div>
 
-            <div role="tablist" className=" ">
-                <a role="tab" className="tab tab-active bg-violet-500 rounded-md text-white">+ Tag</a>
-            </div>   
+
+
+                <div className=" ">
+                  <h1 className="btn btn-sm bg-purple-500 hover:bg-purple-800  text-white  rounded-md">+Tag</h1>
+              </div>
 
       </div>
 

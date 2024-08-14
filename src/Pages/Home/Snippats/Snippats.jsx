@@ -1,35 +1,34 @@
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import useSnippet from "../../../Hooks/useSnippet";
 
 
 const Snippats = () => {
     const [snippats] = useSnippet();
-    console.log(snippats)
 
     return (
-        <section>
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {
-                snippats.map((snippat)=><div key={snippat.id}
-                >
-
-      
-      <div className="card bg-base-100  shadow-xl  ">
-                        <div className="card-body">
-                            <h2 className="card-title">{snippat.title}</h2>
-                            <p>{snippat.date}</p>
-                            {/* <p className="">{snippat.category}</p> */}
-                            <div className="text-start  w-[180px]">
-                                <button className="bg-red-300 btn btn-sm ">{snippat.category}</button>
+        <section className="p-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+                {snippats.map((snippat) => (
+                    <div key={snippat.id} className="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <div className="p-6">
+                            <h2 className="text-2xl font-semibold mb-2">{snippat.title}</h2>
+                            <p className="text-gray-500 mb-4">{snippat.date}</p>
+                            <div className="mb-4">
+                                <button className="bg-red-300 text-white px-4 py-1 rounded-lg text-sm">
+                                    {snippat.category}
+                                </button>
                             </div>
-                            <p>{snippat.description}</p>
-                            <p className="bg-gray-200 rounded-lg p-2">{snippat.code}</p>
-                            
+                            <p className="text-gray-700 mb-4">{snippat.description}</p>
+                            <div className="code-editor ">
+                                <SyntaxHighlighter language={snippat.language} style={materialDark}>
+                                    {snippat.code}
+                                </SyntaxHighlighter>
+                            </div>
                         </div>
-        </div> 
-      
-                </div>)
-            }
-         </div>
+                    </div>
+                ))}
+            </div>
         </section>
     );
 };
