@@ -1,6 +1,7 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import useSnippet from "../../../Hooks/useSnippet";
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
 
 
 const Snippats = () => {
@@ -21,7 +22,7 @@ const Snippats = () => {
                             </div>
                             <p className="text-gray-700 mb-4">{snippat.description}</p>
                             <div className="code-editor ">
-                                <SyntaxHighlighter language={snippat.language} style={materialDark}>
+                                <SyntaxHighlighter language={snippat.language} style={docco}>
                                     {snippat.code}
                                 </SyntaxHighlighter>
                             </div>
