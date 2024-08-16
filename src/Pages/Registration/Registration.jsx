@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
-import { FaGitAlt } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const Registration = () => {
   const {
     register,
     handleSubmit,
@@ -22,10 +21,10 @@ const Login = () => {
     <div className="flex items-center justify-center min-h-screen  bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-2/6 py-14">
         <h2 className="text-2xl font-semibold text-center pb-4">
-          Login your account
+          Create your account
         </h2>
         <p className="text-center text-gray-500 pb-6">
-          Welcome! Login to get started with following.
+          Welcome! Please fill the details to get started.
         </p>
 
 
@@ -100,9 +99,9 @@ const Login = () => {
 
         <div className="text-center">
           <p className="text-gray-500">
-            Don't have an account?{" "}
-            <Link to="/registration" className="text-primary font-bold hover:underline">
-              Sign Up
+            Already have an account?{" "}
+            <Link to="/login" className="text-primary font-bold hover:underline">
+              Sign in
             </Link>
           </p>
         </div>
@@ -112,4 +111,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Registration;
